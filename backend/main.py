@@ -61,7 +61,7 @@ async def predict(payload: ImagePayload):
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["http://localhost:3000", "https://ton-projet.vercel.app"],
     allow_credentials=True,
     allow_methods=["POST"],
     allow_headers=["*"],
