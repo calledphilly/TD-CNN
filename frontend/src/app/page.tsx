@@ -59,7 +59,7 @@ export default function Home() {
 							const canvas = canvasRef.current;
 							if (!canvas) return;
 							const imageData = canvas.toDataURL('image/png');
-							const res = await fetch('http://localhost:8000/predict', {
+							const res = await fetch("https://td-cnn.onrender.com/predict" /* 'http://localhost:8000/predict' */, {
 								method: 'POST',
 								headers: { 'Content-Type': 'application/json' },
 								body: JSON.stringify({ image: imageData }),
