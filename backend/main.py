@@ -18,6 +18,8 @@ class ImagePayload(BaseModel):
 
 @app.post("/predict")
 async def predict(payload: ImagePayload):
+    print("✅ Requête reçue")
+    print("📷 image (début):", payload.image[:50])
     image_b64 = payload.image.split(",")[1]
     image_bytes = base64.b64decode(image_b64)
     img = Image.open(io.BytesIO(image_bytes)).convert("L")
