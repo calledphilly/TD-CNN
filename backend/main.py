@@ -9,7 +9,7 @@ from PIL import Image
 from pydantic import BaseModel
 
 app = FastAPI()
-session = ort.InferenceSession("mnist_cnn2.onnx")
+session = ort.InferenceSession("mnist_cnn.onnx")
 
 
 class ImagePayload(BaseModel):
